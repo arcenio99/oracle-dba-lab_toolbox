@@ -1,0 +1,26 @@
+# by -> Arcenio
+# RMAN-Backup_full.rcv
+
+# ---------------------------------------------------------
+# SCRIPT DE BACKUP E HOUSEKEEPING (LIMPEZA)
+# ---------------------------------------------------------
+
+RUN {
+    # Configura o formato do nome do arquivo (Data e Nome)
+    CONFIGURE CONTROLFILE AUTOBACKUP ON;
+    
+    # Executa o backup otimizado
+    BACKUP AS COMPRESSED BACKUPSET 
+    DATABASE PLUS ARCHIVELOG 
+    DELETE ALL INPUT;
+    
+    # Limpeza: Apaga backups com mais de 7 dias para economizar disco
+    DELETE OBSOLETE;
+	
+}
+
+	# Limpeza (clear) de logs 30 dias +
+    HOST 'find /home/oracle/dumps/scripts/ -name "*.log" -mtime +30 -exec rm {} \;';
+	
+EXIT;
+
