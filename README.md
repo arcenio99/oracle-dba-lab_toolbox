@@ -1,3 +1,4 @@
+### Ambiente testes 🚀 Oracle Linux R8 🚀 com Database Oracle 21c Express Edition (XE)
 Scripts - Recovery RMAN
 ##  Dedicado à automação de rotinas de administração de database Oracle (Lab 21c Multitenant) ## 
 
