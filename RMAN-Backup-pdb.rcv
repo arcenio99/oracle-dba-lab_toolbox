@@ -1,0 +1,28 @@
+# by -> Arcenio
+# RMAN-Backup_pdb.rcv
+
+# ---------------------------------------------------------
+# SCRIPT DE BACKUP E HOUSEKEEPING (LIMPEZA)
+# ---------------------------------------------------------
+
+RUN {
+    # Aloca um canal de disco (opcional, mas profissional)
+    ALLOCATE CHANNEL c1 DEVICE TYPE DISK;
+
+    # Backup do PDB selecionado
+    BACKUP 
+        FORMAT '/u01/app/oracle/fast_recovery_area/CDB/seuPDB_%U' 		
+        PLUGGABLE DATABASE seupdb
+        PLUS ARCHIVELOG 
+        DELETE ALL INPUT;
+
+    # Valida se o backup está íntegro
+    RESTORE PLUGGABLE DATABASE seupdb VALIDATE;
+
+    RELEASE CHANNEL c1;
+}
+
+	# Limpeza (clear) de logs 30 dias +
+    HOST 'find /home/oracle/dumps/scripts/ -name "*.log" -mtime +30 -exec rm {} \;';
+	
+EXIT;
