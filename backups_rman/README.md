@@ -5,7 +5,7 @@
 - Para rodar o backup principal fora da pasta raiz
 `rman target / @/caminho/do/seu/script.rcv | tee -a /caminho/do/nomelog_$(date +%Y%m%d_%H%M).log`
 
-Detalhes:
+Detalhes 🚀☕
 - Gestão de Retenção (DELETE OBSOLETE): Garante a limpeza automática de backups que não são mais necessários para cumprir a janela de recuperação (configurada para 7 dias). Isso evita o esgotamento do storage.
 - Sincronização de Catálogo (CROSSCHECK): Verifica se os arquivos de backup registrados no Control File ainda existem fisicamente no disco. Caso um arquivo tenha sido removido manualmente, o comando o marca como EXPIRED.
 - Limpeza de Metadados (DELETE EXPIRED): Remove do catálogo os registros de backups que falharam no Crosscheck, mantendo o repositório de informações do RMAN sempre limpo e preciso.
