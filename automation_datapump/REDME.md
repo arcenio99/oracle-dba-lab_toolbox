@@ -1,6 +1,8 @@
 🚀Backup & Recovery (RMAN) Automation 🛡️
 Esta seção contém a automação completa do ciclo de vida dos backups físicos, garantindo a integridade dos dados e a otimização do armazenamento.
 
+Como Usar
+
 Principais Funcionalidades:
 
 Agendamento via Crontab: Execução programada (ex: 06h e 18h) sem intervenção manual.
@@ -26,12 +28,18 @@ chmod +x scripts/exe_backup_days.sh
 
 Configure the Crontab for the oracle user:
 
-crontab -e
+crontab -u oracle -e
 
 Add the execution line (example for 9:15 PM):
 
-15 21 * * * /path/to/your/script/exe_backup_days.sh
+00 6,18 * * * /path/to/your/script/exe_backup_days.sh
+#	Anatomia do seu Agendamento:
+
+Minuto	00			|No minuto 30.
+Hora	06			|Às 10 da noite.
+Dia do Mês	*		|Todos os dias do mês.
+Mês	*				|Todos os meses do ano.
+Dia da Semana	*	|De domingo a domingo.
 
 Monitor the output in the logs folder:
-
-tail -f logs/bkp_$(date +%Y%m%d).log
+- tail -f logs/bkp_$(date +%Y%m%d).log
