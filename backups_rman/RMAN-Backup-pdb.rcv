@@ -9,6 +9,10 @@ RUN {
     # Aloca um canal de disco (opcional, mas profissional)
     ALLOCATE CHANNEL c1 DEVICE TYPE DISK;
 
+ 	# Sincroniza o catálogo com o que realmente existe no disco
+    CROSSCHECK BACKUP;
+    DELETE EXPIRED BACKUP;  
+
     # Backup do PDB selecionado
     BACKUP 
         FORMAT '/u01/app/oracle/fast_recovery_area/CDB/seuPDB_%U' 		
