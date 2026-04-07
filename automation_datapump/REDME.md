@@ -17,7 +17,7 @@ DELETE OBSOLETE: Expurgo de arquivos antigos baseado na política de retenção 
 
 Logs Detalhados: Redirecionamento de saída para arquivos de log datados (bkp_YYYYMMDD.log) para auditoria e troubleshooting.
 
-
+___________________________________________________________________________________________________________________________________________________________________
 
 🚀 How to Use 🛡️
 Grant execution permission to the shell script:
