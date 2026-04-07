@@ -23,13 +23,14 @@ Logs Detalhados: Redirecionamento de saída para arquivos de log datados (bkp_YY
 ___________________________________________________________________________________________________________________________________________________________________
 
 🚀 How to Use 🛡️
+
 Grant execution permission to the shell script:
 
-chmod +x scripts/exe_backup_days.sh
+- chmod +x scripts/exe_backup_days.sh
 
 Configure the Crontab for the oracle user:
 
-crontab -u oracle -e
+- crontab -u oracle -e
 
 Add the execution line (example for 9:15 PM):
 
