@@ -12,7 +12,7 @@ Gestão de Variáveis de Ambiente: Scripts Shell (.sh) configurados com ORACLE_H
 
 Backup Full Comprimido: Utilização de AS COMPRESSED BACKUPSET para reduzir o consumo de storage no Lab.
 
-Housekeeping Inteligente: * CROSSCHECK: Sincronização entre o catálogo RMAN e os arquivos físicos no disco.
+Housekeeping Inteligente: CROSSCHECK: Sincronização entre o catálogo RMAN e os arquivos físicos no disco.
 
 DELETE EXPIRED: Remoção automática de registros de backups inexistentes.
 
@@ -32,7 +32,7 @@ Configure the Crontab for the oracle user:
 
 - crontab -u oracle -e
 
-Add the execution line (example for 9:15 PM):
+Add the execution line:
 
 30 6,18 * * * /path/to/your/script/exe_backup_days.sh
 
