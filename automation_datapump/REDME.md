@@ -1,8 +1,8 @@
-🚀Backup & Recovery (RMAN) Automation 🛡️
+Backup & Recovery (RMAN) Automation
 
 Esta seção contém a automação completa do ciclo de vida dos backups físicos, garantindo a integridade dos dados e a otimização do armazenamento.
 
-Como Usar
+🚀Como Usar 🛡️
 
 Principais Funcionalidades:
 
