@@ -40,11 +40,11 @@ exemplo: 00 06,18 * * * /home/oracle/dumps/scripts/exe_backup_days.sh
 
 #	Anatomia do seu Agendamento:
 
-- Minuto	00 -> No minuto 30 /
-- Hora	06,10 -> às 6 da manhã e às 18 da tarde / 
-- Dia do Mês	*	 -> Todos os dias do mês /
-- Mês	 * -> Todos os meses do ano /
-- Dia da Semana	* -> De domingo a domingo /
+- Minuto	00   -> No minuto 30 /
+- Hora	06,10   -> às 6 da manhã e às 18 da tarde / 
+- Dia do Mês	*    -> Todos os dias do mês /
+- Mês	 *    -> Todos os meses do ano /
+- Dia da Semana	*   -> De domingo a domingo /
 
 Monitor the output in the logs folder:
 - tail -f logs/bkp_$(date +%Y%m%d).log
