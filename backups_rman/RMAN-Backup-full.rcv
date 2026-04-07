@@ -8,7 +8,11 @@
 RUN {
     # Configura o formato do nome do arquivo (Data e Nome)
     CONFIGURE CONTROLFILE AUTOBACKUP ON;
-    
+
+	# Sincroniza o catálogo com o que realmente existe no disco
+    CROSSCHECK BACKUP;
+    DELETE EXPIRED BACKUP;  
+
     # Executa o backup otimizado
     BACKUP AS COMPRESSED BACKUPSET 
     DATABASE PLUS ARCHIVELOG 
