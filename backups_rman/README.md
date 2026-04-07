@@ -7,4 +7,5 @@
 
 Detalhes:
 -> Comando DELETE OBSOLETE respeita a política de retenção configurada no banco (7 dias)
+
 -> Crosscheck comando para checar a integridade antes de apagar algo, evitando erros no backup
