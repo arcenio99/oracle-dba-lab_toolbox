@@ -34,7 +34,7 @@ Configure the Crontab for the oracle user:
 
 Add the execution line (example for 9:15 PM):
 
-00 6,18 * * * /path/to/your/script/exe_backup_days.sh
+30 6,18 * * * /path/to/your/script/exe_backup_days.sh
 
 exemplo: 00 06,18 * * * /home/oracle/dumps/scripts/exe_backup_days.sh
 
