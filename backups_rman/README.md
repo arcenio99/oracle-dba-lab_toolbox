@@ -6,6 +6,7 @@
 `rman target / @/caminho/do/seu/script.rcv | tee -a /caminho/do/nomelog_$(date +%Y%m%d_%H%M).log`
 
 Detalhes:
+
 -> Comando DELETE OBSOLETE respeita a política de retenção configurada no banco (7 dias)
 
 -> Crosscheck comando para checar a integridade antes de apagar algo, evitando erros no backup
